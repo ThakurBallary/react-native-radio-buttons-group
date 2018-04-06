@@ -1,0 +1,28 @@
+{
+  "name": "react-native-radio-buttons-group",
+  "version": "1.0.0",
+  "description": "Simple and Best. An easy to use radio buttons for react native apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thakurballary/react-native-radio-buttons-group.git"
+  },
+  "keywords": [
+    "react-native-radio-buttons",
+    "react-native-simple-radio-buttons",
+    "react-native",
+    "radio-buttons",
+    "radio-buttons-group",
+    "react-native-radio-group",
+    "react-native-component"
+  ],
+  "author": "Thakur Ballary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thakurballary/react-native-radio-buttons-group/issues"
+  },
+  "homepage": "https://github.com/thakurballary/react-native-radio-buttons-group#readme"
+}
