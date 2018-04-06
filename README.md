@@ -1,18 +1,18 @@
-# react-native-radio-buttons-group
+# React Native Radio Buttons Group
 Simple and Best. An easy to use radio buttons for react native apps.
 
-================================
-REACT NATIVE RADIO BUTTONS GROUP 
-================================
+## Getting Started
 
-========================
-TODO
-------------------------
-animation
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-========================
-Default
-------------------------
+### Installing
+
+```
+npm i react-native-radio-buttons-group --save
+```
+
+### Default
+```
 {
   color: '#444',
   disabled: false,
@@ -22,23 +22,26 @@ Default
   size: 24,
   value: <label> // value is assigned to label
 }
+```
 
-========================
-Props
-------------------------
-color
+### Props
+```
+color 
 disabled
 label
 layout
 selected
 size
 value
+```
 
-========================
-Validation
-------------------------
-Problem: "label" should be unique
-Solution: alert function
+### TODO
+- animation
 
-Problem: "selected: true" for more than one button
-Solution: set "selected: false" for all other buttons 
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
