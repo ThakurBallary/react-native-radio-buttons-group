@@ -55,10 +55,7 @@ export default class App extends Component {
   onPress = radioButtons => this.setState({ radioButtons });
 
   // output
-  onSubmit = () => {
-    const selectedButton = this.state.radioButtons.find(e => e.selected == true).value;
-    alert(selectedButton);
-  };
+  onSubmit = () => alert(this.state.radioButtons.find(e => e.selected == true).value);
 
   render() {
     return (
@@ -67,7 +64,7 @@ export default class App extends Component {
           radioButtons={this.state.radioButtons}
           onPress={this.onPress}
         />
-        <Text style={styles.submit} onPress={this.onSubmit}>Submit</Text>
+        <Text style={{ padding: 40, alignSelf: 'center' }} onPress={this.onSubmit}>Submit</Text>
       </View>
     );
   }
@@ -78,12 +75,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  submit: {
-    borderWidth: 1,
-    borderRadius: 4,
-    paddingHorizontal: 100,
-    paddingVertical: 10,
   },
 });
 
@@ -114,10 +105,6 @@ selected        Boolen          true/false
 size            Number          < positive numbers >
 value           String          < mention value if you want to give different value other than 'label'>
 ```
-
-### TODO
-
-- animation
 
 ## Contributing
 
