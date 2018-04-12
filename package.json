@@ -11,13 +11,18 @@
     "url": "git+https://github.com/thakurballary/react-native-radio-buttons-group.git"
   },
   "keywords": [
-    "react-native-radio-buttons",
+    "react native-radio-buttons",
     "react-native-simple-radio-buttons",
     "react-native",
     "radio-buttons",
     "radio-buttons-group",
     "react-native-radio-group",
-    "react-native-component"
+    "react-native-component",
+    "ios",
+    "android",
+    "form",
+    "radio",
+    "button"
   ],
   "author": "Thakur Ballary",
   "license": "MIT",
