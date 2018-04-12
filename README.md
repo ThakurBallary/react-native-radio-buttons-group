@@ -93,6 +93,15 @@ selected | Boolean | false | true / false
 size | Number | 24 | positive numbers
 value | String | value assigned to label | any string
 
+###### Horizontal (side by side)
+```
+<RadioGroup 
+    radioButtons={this.state.data} 
+    onPress={this.onPress} 
+    flexDirection='row'
+/>
+```
+
 ## Contributing
 
 Contribution always motivates. 
