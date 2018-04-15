@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-import RadioGroup from './RadioGroup';
+import RadioGroup from 'react-native-radio-buttons-group';
 
 export default class Horizontal extends Component {
     state = {
