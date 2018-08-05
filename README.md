@@ -8,6 +8,8 @@ Simple and Best. An easy to use radio buttons for react native apps.
 
 ## Getting Started
 
+### NOTE: This package is updated and actively maintained in [react-native-btr](https://npmjs.com/package/react-native-btr) library. Hence, we recommend you to use this component from [react-native-btr](https://npmjs.com/package/react-native-btr) library.
+
 ###### Just a sneak peek (lots more can be done)
 
 ![DEMO](./docs/images/react-native-radio-buttons-group.gif)
