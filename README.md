@@ -106,7 +106,7 @@ disabled | boolean | no | false | true / false
 id | string | yes |  | any string
 label | string | no |  | any string
 labelStyle | object | no |  | react style
-layout | enum | no | column | row / column
+layout | enum | no | row | row / column
 onPress | function | no |  | any function 
 selected | boolean | no | false | true / false
 size | number | no | 24 | positive numbers
