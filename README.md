@@ -8,8 +8,6 @@ Simple and Best. An easy to use radio buttons for react native apps.
 
 ## Getting Started
 
-### NOTE: This package is updated and actively maintained in [react-native-btr](https://npmjs.com/package/react-native-btr) library. Hence, we recommend you to use this component from [react-native-btr](https://npmjs.com/package/react-native-btr) library.
-
 ###### Just a sneak peek (lots more can be done)
 
 ![DEMO](./docs/images/react-native-radio-buttons-group.gif)
@@ -19,96 +17,118 @@ Simple and Best. An easy to use radio buttons for react native apps.
 ```
 npm i react-native-radio-buttons-group --save
 ```
+or
+```
+yarn add react-native-radio-buttons-group
+```
 
 ### Usage
 
+##### Javascript Example
+
 ###### App.js
 ```
-import React, { Component } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-
+import React, { useState } from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
 
-export default class App extends Component {
-    state = {
-        data: [
-            {
-                label: 'Default value is same as label',
-            },
-            {
-                label: 'Value is different',
-                value: "I'm not same as label",
-            },
-            {
-                label: 'Color',
-                color: 'green',
-            },
-            {
-                disabled: true,
-                label: 'Disabled',
-            },
-            {
-                label: 'Size',
-                size: 32,
-            },
-        ],
-    };
+const radioButtonsData = [{
+    id: '1', // acts as primary key, should be unique and non-empty string
+    label: 'Option 1',
+    value: 'option1'
+}, {
+    id: '2',
+    label: 'Option 2',
+    value: 'option2'
+}]
 
-    // update state
-    onPress = data => this.setState({ data });
+export default function App() {
 
-    render() {
-        let selectedButton = this.state.data.find(e => e.selected == true);
-        selectedButton = selectedButton ? selectedButton.value : this.state.data[0].label;
-        return (
-            <View style={styles.container}>
-                <Text style={styles.valueText}>
-                    Value = {selectedButton}
-                </Text>
-                <RadioGroup radioButtons={this.state.data} onPress={this.onPress} />
-            </View>
-        );
+    const [radioButtons, setRadioButtons] = useState(radioButtonsData)
+
+    function onPressRadioButton(radioButtonsArray) {
+        setRadioButtons(radioButtonsArray);
     }
+
+    return (
+        <RadioGroup 
+            radioButtons={radioButtons} 
+            onPress={onPressRadioButton} 
+        />
+    );
+
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    valueText: {
-        fontSize: 18, 
-        marginBottom: 50,
-    },
-});
+```
+
+##### Typescript Example
+
+###### App.tsx
+```
+import React, { useState } from 'react';
+import RadioGroup, {RadioButtonProps} from 'react-native-radio-buttons-group';
+
+const radioButtonsData: RadioButtonProps[] = [{
+    id: '1', // acts as primary key, should be unique and non-empty string
+    label: 'Option 1',
+    value: 'option1'
+}, {
+    id: '2',
+    label: 'Option 2',
+    value: 'option2'
+}]
+
+export default function App() {
+
+    const [radioButtons, setRadioButtons] = useState<RadioButtonProps[]>(radioButtonsData)
+
+    function onPressRadioButton(radioButtonsArray: RadioButtonProps[]) {
+        setRadioButtons(radioButtonsArray);
+    }
+
+    return (
+        <RadioGroup 
+            radioButtons={radioButtons} 
+            onPress={onPressRadioButton} 
+        />
+    );
+
+}
+
 ```
 
 ### Props
-Key | Type | Default | Value
---- | --- | --- | --- 
-color | String | #444 | all css color formats
-disabled | Boolean | false | true / false
-label | String | You forgot to give label | any string
-layout | String | column | row / column
-selected | Boolean | false | true / false
-size | Number | 24 | positive numbers
-value | String | value assigned to label | any string
+
+#### RadioButton
+Key | Type | Required | Default | Valid Values
+--- | --- | --- | --- | --- 
+color | string | no | #444 | css color formats
+disabled | boolean | no | false | true / false
+id | string | yes |  | any string
+label | string | no |  | any string
+labelStyle | object | no |  | react style
+layout | enum | no | column | row / column
+onPress | function | no |  | any function 
+selected | boolean | no | false | true / false
+size | number | no | 24 | positive numbers
+value | string | no |  | any string
+
+#### RadioGroup
+Key | Type | Required | Default | Valid Values
+--- | --- | --- | --- | ---
+layout | enum | no | column | row / column
+onPress | function | no | | any function
+radioButtons | array | yes | | arrary of [RadioButton](#radiobutton) objects
 
 ###### Horizontal (side by side)
 ```
 <RadioGroup 
-    radioButtons={this.state.data} 
-    onPress={this.onPress} 
-    flexDirection='row'
+    radioButtons={radioButtons} 
+    onPress={onPressRadioButton} 
+    layout='row'
 />
 ```
 
-## Contributing
-
-Contribution always motivates. 
-
-Incase of suggestions, Google my name "Thakur Ballary" and reach me on any social platforms.
+## Contributions
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
