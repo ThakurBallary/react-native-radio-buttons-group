@@ -1,2 +1,2 @@
-import RadioButtonsGroup from "./lib/RadioButtonsGroup";
+import RadioButtonsGroup from "./lib";
 export default RadioButtonsGroup;

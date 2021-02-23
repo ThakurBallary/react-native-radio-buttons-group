@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { RadioButtonProps, RadioGroupProps } from './types';
-import RadioButton from './RadioButton';
+import { RadioButton, RadioButtonProps, RadioGroupProps } from './index';
 
 export default function RadioGroup({ layout = 'column', onPress, radioButtons }: RadioGroupProps) {
 

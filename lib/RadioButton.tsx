@@ -5,6 +5,7 @@ import { RadioButtonProps } from './types';
 
 export default function RadioButton({
   color = '#444',
+  containerStyle,
   disabled = false,
   id,
   label,
@@ -38,7 +39,7 @@ export default function RadioButton({
   return (
     <Pressable
       onPress={handlePress}
-      style={[styles.container, orientation, { opacity: disabled ? 0.2 : 1 }]}
+      style={[styles.container, orientation, { opacity: disabled ? 0.2 : 1 }, containerStyle]}
     >
       <View
         style={[

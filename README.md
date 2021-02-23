@@ -102,6 +102,7 @@ export default function App() {
 Key | Type | Required | Default | Valid Values
 --- | --- | --- | --- | --- 
 color | string | no | #444 | css color formats
+containerStyle | object | no | | react style
 disabled | boolean | no | false | true / false
 id | string | yes |  | any string
 label | string | no |  | any string
