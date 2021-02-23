@@ -2,7 +2,7 @@
 
 Simple and Best. An easy to use radio buttons for react native apps.
 
-![LICENSE MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)
+![npm](https://img.shields.io/npm/v/react-native-radio-buttons-group) ![LICENSE MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
 [![NPM](https://nodei.co/npm/react-native-radio-buttons-group.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-native-radio-buttons-group/)
 
