@@ -8,13 +8,9 @@ export default function RadioGroup({ layout = 'column', onPress, radioButtons }:
   const [radioButtonsArray, setRadioButtonsArray] = useState<RadioButtonProps[]>(radioButtons);
 
   function handlePress(id: string) {
-    const prevSelected = radioButtonsArray.find(e => e.selected);
-    if (prevSelected) {
-      prevSelected.selected = false;
-    }
-    const curSelected = radioButtonsArray.find(e => e.id === id);
-    if (curSelected) {
-      curSelected.selected = true;
+    for (const button of radioButtonsArray) {
+      if (button.selected && button.id === id) return;
+      button.selected = button.id === id;
     }
     setRadioButtonsArray([...radioButtonsArray]);
     if (onPress) {
