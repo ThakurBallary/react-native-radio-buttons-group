@@ -135,4 +135,4 @@ Please create a pull request
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/ThakurBallary/react-native-radio-buttons-group/blob/master/LICENSE)
+[MIT License](https://github.com/ThakurBallary/react-native-radio-buttons-group/blob/master/LICENSE)
