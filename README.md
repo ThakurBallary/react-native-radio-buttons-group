@@ -131,7 +131,7 @@ radioButtons | array | yes | | arrary of [RadioButton](#radiobutton) objects
 
 ## Contributions
 
-Please create a pull request
+Fork and create a pull request
 
 ## License
 
