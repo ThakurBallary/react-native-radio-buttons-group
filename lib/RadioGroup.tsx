@@ -1,33 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
+import _ from 'lodash';
 
 import { RadioButton, RadioButtonProps, RadioGroupProps } from './index';
 
 export default function RadioGroup({ layout = 'column', onPress, radioButtons }: RadioGroupProps) {
 
-  const [radioButtonsArray, setRadioButtonsArray] = useState<RadioButtonProps[]>(radioButtons);
+  const [radioButtonsLocal, setRadioButtonsLocal] = useState<RadioButtonProps[]>(radioButtons);
 
-  useEffect(()=>{
-    if(JSON.stringify(radioButtons) !== JSON.stringify(radioButtonsArray)) {
-      setRadioButtonsArray(radioButtons);
-    }
-  },[radioButtons, radioButtonsArray])
+  if(!_.isEqual(radioButtons, radioButtonsLocal)) {
+    setRadioButtonsLocal(radioButtons);
+  }
 
   function handlePress(id: string) {
-    for (const button of radioButtonsArray) {
+    for (const button of radioButtonsLocal) {
       if (button.selected && button.id === id) return;
       button.selected = button.id === id;
     }
-    setRadioButtonsArray([...radioButtonsArray]);
+    setRadioButtonsLocal([...radioButtonsLocal]);
     if (onPress) {
-      onPress(radioButtonsArray);
+      onPress(radioButtonsLocal);
     }
   }
 
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: layout }}>
-        {radioButtonsArray.map((button) => (
+        {radioButtonsLocal.map((button) => (
           <RadioButton
             {...button}
             key={button.id}
