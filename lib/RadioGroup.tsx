@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { RadioButton, RadioButtonProps, RadioGroupProps } from './index';
@@ -6,6 +6,12 @@ import { RadioButton, RadioButtonProps, RadioGroupProps } from './index';
 export default function RadioGroup({ layout = 'column', onPress, radioButtons }: RadioGroupProps) {
 
   const [radioButtonsArray, setRadioButtonsArray] = useState<RadioButtonProps[]>(radioButtons);
+
+  useEffect(()=>{
+    if(JSON.stringify(radioButtons) !== JSON.stringify(radioButtonsArray)) {
+      setRadioButtonsArray(radioButtons);
+    }
+  },[radioButtons, radioButtonsArray])
 
   function handlePress(id: string) {
     for (const button of radioButtonsArray) {
