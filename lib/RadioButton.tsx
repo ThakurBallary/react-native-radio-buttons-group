@@ -4,6 +4,7 @@ import { PixelRatio, Pressable, StyleSheet, Text, View } from 'react-native';
 import { RadioButtonProps } from './types';
 
 export default function RadioButton({
+  borderColor = '#444',
   color = '#444',
   containerStyle,
   disabled = false,
@@ -45,7 +46,7 @@ export default function RadioButton({
         style={[
           styles.border,
           {
-            borderColor: color,
+            borderColor: borderColor,
             borderWidth,
             width: sizeFull,
             height: sizeFull,
