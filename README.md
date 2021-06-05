@@ -1,6 +1,6 @@
 # React Native Radio Buttons Group
 
-Simple and Best. An easy to use radio buttons for react native apps.
+Simple, best and easy to use radio buttons for react native apps.
 
 ![npm](https://img.shields.io/npm/v/react-native-radio-buttons-group) ![LICENSE MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
