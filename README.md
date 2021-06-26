@@ -14,11 +14,11 @@ Simple, best and easy to use radio buttons for react native apps.
 
 ### Installation
 
-```
+```bash
 npm i react-native-radio-buttons-group --save
 ```
 or
-```
+```bash
 yarn add react-native-radio-buttons-group
 ```
 
@@ -27,7 +27,7 @@ yarn add react-native-radio-buttons-group
 ##### Javascript Example
 
 ###### App.js
-```
+```jsx
 import React, { useState } from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
 
@@ -63,7 +63,7 @@ export default function App() {
 ##### Typescript Example
 
 ###### App.tsx
-```
+```tsx
 import React, { useState } from 'react';
 import RadioGroup, {RadioButtonProps} from 'react-native-radio-buttons-group';
 
@@ -105,7 +105,7 @@ borderColor | string | no | color | css color formats
 color | string | no | #444 | css color formats
 containerStyle | object | no | | react style
 disabled | boolean | no | false | true / false
-id | string | yes |  | any string
+id | string | yes |  | unique string
 label | string | no |  | any string
 labelStyle | object | no |  | react style
 layout | enum | no | row | row / column
@@ -122,7 +122,7 @@ onPress | function | no | | any function
 radioButtons | array | yes | | arrary of [RadioButton](#radiobutton) objects
 
 ###### Horizontal (side by side)
-```
+```jsx
 <RadioGroup 
     radioButtons={radioButtons} 
     onPress={onPressRadioButton} 
