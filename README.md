@@ -117,6 +117,7 @@ value | string | no |  | any string
 #### RadioGroup
 Key | Type | Required | Default | Valid Values
 --- | --- | --- | --- | ---
+containerStyle | object | no | | react style
 layout | enum | no | column | row / column
 onPress | function | no | | any function
 radioButtons | array | yes | | arrary of [RadioButton](#radiobutton) objects
