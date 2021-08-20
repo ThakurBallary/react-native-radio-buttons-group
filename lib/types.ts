@@ -1,6 +1,7 @@
 export type RadioButtonProps = {
   borderColor?: string;
   color?: string;
+  focusColor?: string;
   containerStyle?: object;
   disabled?: boolean;
   id: string;
@@ -8,6 +9,8 @@ export type RadioButtonProps = {
   labelStyle?: object;
   layout?: 'row' | 'column';
   onPress?: (id: string) => void;
+  onFocus?: (id: string) => void;
+  onBlur?: (id: string) => void;
   selected?: boolean;
   size?: number;
   value?: string;

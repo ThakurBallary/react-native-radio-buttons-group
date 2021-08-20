@@ -1,11 +1,12 @@
-import React from 'react';
-import { PixelRatio, Pressable, StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
+import {PixelRatio, Pressable, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 import { RadioButtonProps } from './types';
 
 export default function RadioButton({
   borderColor,
   color = '#444',
+  focusColor,
   containerStyle,
   disabled = false,
   id,
@@ -13,6 +14,8 @@ export default function RadioButton({
   labelStyle,
   layout = 'row',
   onPress,
+  onFocus,
+  onBlur,
   selected = false,
   size = 24 }: RadioButtonProps) {
 
@@ -22,6 +25,8 @@ export default function RadioButton({
 
   let orientation: any = { flexDirection: 'row' }
   let margin: any = { marginLeft: 10 };
+
+  const [displayColor, setDisplayColor] = useState(color);
 
   if (layout === 'column') {
     orientation = { alignItems: 'center' };
@@ -37,16 +42,41 @@ export default function RadioButton({
     }
   }
 
+  function handleFocus() {
+    if (disabled) {
+      return null;
+    }
+    if (onFocus) {
+      onFocus(id);
+    }
+    if(focusColor) {
+      setDisplayColor(focusColor);
+    }
+  }
+
+  function handleBlur() {
+    if (disabled) {
+      return null;
+    }
+    if (onBlur) {
+      onBlur(id);
+    }
+
+    setDisplayColor(color);
+  }
+
   return (
-    <Pressable
+    <TouchableOpacity
       onPress={handlePress}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
       style={[styles.container, orientation, { opacity: disabled ? 0.2 : 1 }, containerStyle]}
     >
       <View
         style={[
           styles.border,
           {
-            borderColor: borderColor || color,
+            borderColor: borderColor || displayColor,
             borderWidth,
             width: sizeFull,
             height: sizeFull,
@@ -56,7 +86,7 @@ export default function RadioButton({
         {selected && (
           <View
             style={{
-              backgroundColor: color,
+              backgroundColor: displayColor,
               width: sizeHalf,
               height: sizeHalf,
               borderRadius: sizeHalf
@@ -67,7 +97,7 @@ export default function RadioButton({
       {
         Boolean(label) && <Text style={[margin, labelStyle]}>{label}</Text>
       }
-    </Pressable>
+    </TouchableOpacity>
   )
 }
 
