@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import _ from 'lodash';
 
-import { RadioButton, RadioButtonProps, RadioGroupProps } from './index';
+import RadioButton from './RadioButton';
+import { RadioButtonProps, RadioGroupProps } from './types';
 
 export default function RadioGroup({ containerStyle, layout = 'column', onPress, radioButtons }: RadioGroupProps) {
 
