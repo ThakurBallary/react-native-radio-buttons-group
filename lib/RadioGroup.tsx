@@ -30,7 +30,12 @@ export default function RadioGroup({ containerStyle, layout = 'column', onPress,
         <RadioButton
           {...button}
           key={button.id}
-          onPress={handlePress}
+          onPress={(id: string) => {
+            handlePress(id);
+            if (button.onPress && typeof button.onPress === 'function') {
+              button.onPress(id);
+            }
+          }}
         />
       ))}
     </View>
