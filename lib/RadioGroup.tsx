@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import _ from 'lodash';
+import isEqual from 'lodash.isequal';
 
 import RadioButton from './RadioButton';
 import { RadioButtonProps, RadioGroupProps } from './types';
@@ -9,7 +9,7 @@ export default function RadioGroup({ containerStyle, layout = 'column', onPress,
 
   const [radioButtonsLocal, setRadioButtonsLocal] = useState<RadioButtonProps[]>(radioButtons);
 
-  if(!_.isEqual(radioButtons, radioButtonsLocal)) {
+  if(isEqual(radioButtons, radioButtonsLocal)) {
     setRadioButtonsLocal(radioButtons);
   }
 
