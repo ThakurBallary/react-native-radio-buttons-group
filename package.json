@@ -31,6 +31,6 @@
   },
   "homepage": "https://github.com/thakurballary/react-native-radio-buttons-group#readme",
   "dependencies": {
-    "lodash.isequal": "*"
+    "lodash.isequal": "4.5.0"
   }
 }
