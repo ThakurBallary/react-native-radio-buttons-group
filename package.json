@@ -1,6 +1,6 @@
 {
   "name": "react-native-radio-buttons-group",
-  "version": "2.2.9",
+  "version": "2.2.10",
   "description": "Simple and Best. An easy to use radio buttons for react native apps.",
   "main": "./lib/index.ts",
   "scripts": {

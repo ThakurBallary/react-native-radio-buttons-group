@@ -9,7 +9,7 @@ export default function RadioGroup({ containerStyle, layout = 'column', onPress,
 
   const [radioButtonsLocal, setRadioButtonsLocal] = useState<RadioButtonProps[]>(radioButtons);
 
-  if(isEqual(radioButtons, radioButtonsLocal)) {
+  if(!isEqual(radioButtons, radioButtonsLocal)) {
     setRadioButtonsLocal(radioButtons);
   }
 
