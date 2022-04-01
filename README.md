@@ -12,6 +12,8 @@ Simple, best and easy to use radio buttons for react native apps.
 
 ![DEMO](./docs/images/react-native-radio-buttons-group.gif)
 
+https://img.buymeacoffee.com/button-api
+
 ### Installation
 
 ```bash
@@ -144,3 +146,5 @@ Fork and create a pull request
 
 [![Stargazers over time](https://starchart.cc/ThakurBallary/react-native-radio-buttons-group.svg)](https://starchart.cc/ThakurBallary/react-native-radio-buttons-group)
 
+## Sponsor
+<a href="https://www.buymeacoffee.com/thakurballary" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
