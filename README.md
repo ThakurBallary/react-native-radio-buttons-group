@@ -12,8 +12,6 @@ Simple, best and easy to use radio buttons for react native apps.
 
 ![DEMO](./docs/images/react-native-radio-buttons-group.gif)
 
-https://img.buymeacoffee.com/button-api
-
 ### Installation
 
 ```bash
