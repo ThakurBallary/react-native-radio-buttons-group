@@ -40,7 +40,7 @@ export default function RadioButton({
   }
 
   return (
-    <>
+    <View>
     <Pressable
       onPress={handlePress}
       style={[styles.container, orientation, { opacity: disabled ? 0.2 : 1 }, containerStyle]}
@@ -71,8 +71,10 @@ export default function RadioButton({
         Boolean(label) && <Text style={[margin, labelStyle]}>{label}</Text>
       }
     </Pressable>
-     Boolean(description) && <Text style={[margin, descriptionStyle]}>{description}</Text>
-    </>
+      { 
+        Boolean(description) && <Text style={[margin, descriptionStyle]}>{description}</Text>
+      }
+    </View>
   )
 }
 
