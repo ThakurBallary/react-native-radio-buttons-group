@@ -7,6 +7,8 @@ export default function RadioButton({
   borderColor,
   color = '#444',
   containerStyle,
+  description,
+  descriptionStyle,
   disabled = false,
   id,
   label,
@@ -66,6 +68,7 @@ export default function RadioButton({
       </View>
       {
         Boolean(label) && <Text style={[margin, labelStyle]}>{label}</Text>
+        Boolean(description) && <Text style={[margin, descriptionStyle]}>{description}</Text>
       }
     </Pressable>
   )
