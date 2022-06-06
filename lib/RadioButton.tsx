@@ -73,7 +73,12 @@ export default function RadioButton({
         </View>
         {Boolean(label) && <Text style={[margin, labelStyle]}>{label}</Text>}
       </Pressable>
-      {Boolean(description) && <Text style={[margin, descriptionStyle]}>{description}</Text>}
+      <View style={[styles.descriptionContainer, orientation]}>
+      <View style={{ width: sizeFull }}/>
+        { 
+          Boolean(description) && <Text style={[margin, descriptionStyle]}>{description}</Text> 
+        }
+      </View>
     </>
   );
 }
@@ -83,6 +88,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 10,
     marginVertical: 5,
+  },
+  descriptionContainer: {
+    alignItems: 'center',
+    marginHorizontal: 10,
+    marginBottom: 10,
   },
   border: {
     justifyContent: 'center',
