@@ -2,6 +2,8 @@ export type RadioButtonProps = {
   borderColor?: string;
   color?: string;
   containerStyle?: object;
+  description?: string;
+  descriptionStyle?: object;
   disabled?: boolean;
   id: string;
   label?: string;
