@@ -104,6 +104,8 @@ Key | Type | Required | Default | Valid Values
 borderColor | string | no | color | css color formats
 color | string | no | #444 | css color formats
 containerStyle | object | no | | react style
+description | string | no |  | any string
+descriptionStyle | object | no |  | react style
 disabled | boolean | no | false | true / false
 id | string | yes |  | unique string
 label | string | no |  | any string
