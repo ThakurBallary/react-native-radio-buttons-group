@@ -104,6 +104,8 @@ Key | Type | Required | Default | Valid Values
 borderColor | string | no | color | css color formats
 color | string | no | #444 | css color formats
 containerStyle | object | no | | react style
+description | string | no |  | any string
+descriptionStyle | object | no |  | react style
 disabled | boolean | no | false | true / false
 id | string | yes |  | unique string
 label | string | no |  | any string
@@ -139,3 +141,11 @@ Fork and create a pull request
 ## License
 
 [MIT License](https://github.com/ThakurBallary/react-native-radio-buttons-group/blob/master/LICENSE)
+
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/ThakurBallary/react-native-radio-buttons-group.svg)](https://starchart.cc/ThakurBallary/react-native-radio-buttons-group)
+
+## Sponsor
+<a href="https://www.buymeacoffee.com/thakurballary" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
