@@ -31,19 +31,20 @@ yarn add react-native-radio-buttons-group
 import React, { useState } from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
 
-const radioButtonsData = [{
-    id: '1', // acts as primary key, should be unique and non-empty string
-    label: 'Option 1',
-    value: 'option1'
-}, {
-    id: '2',
-    label: 'Option 2',
-    value: 'option2'
-}]
-
 export default function App() {
 
-    const [radioButtons, setRadioButtons] = useState(radioButtonsData)
+    const [radioButtons, setRadioButtons] = useState([
+        {
+            id: '1', // acts as primary key, should be unique and non-empty string
+            label: 'Option 1',
+            value: 'option1'
+        },
+        {
+            id: '2',
+            label: 'Option 2',
+            value: 'option2'
+        }
+    ]);
 
     function onPressRadioButton(radioButtonsArray) {
         setRadioButtons(radioButtonsArray);
@@ -67,19 +68,20 @@ export default function App() {
 import React, { useState } from 'react';
 import RadioGroup, {RadioButtonProps} from 'react-native-radio-buttons-group';
 
-const radioButtonsData: RadioButtonProps[] = [{
-    id: '1', // acts as primary key, should be unique and non-empty string
-    label: 'Option 1',
-    value: 'option1'
-}, {
-    id: '2',
-    label: 'Option 2',
-    value: 'option2'
-}]
-
 export default function App() {
 
-    const [radioButtons, setRadioButtons] = useState<RadioButtonProps[]>(radioButtonsData)
+    const [radioButtons, setRadioButtons] = useState<RadioButtonProps[]>([
+        {
+            id: '1', // acts as primary key, should be unique and non-empty string
+            label: 'Option 1',
+            value: 'option1'
+        },
+        {
+            id: '2',
+            label: 'Option 2',
+            value: 'option2'
+        }
+    ]);
 
     function onPressRadioButton(radioButtonsArray: RadioButtonProps[]) {
         setRadioButtons(radioButtonsArray);
