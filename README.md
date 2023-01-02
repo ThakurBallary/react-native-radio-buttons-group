@@ -104,6 +104,7 @@ export default function App() {
 Key | Type | Required | Default | Valid Values
 --- | --- | --- | --- | --- 
 borderColor | string | no | color | css color formats
+borderSize | number | 2 | | positive numbers
 color | string | no | #444 | css color formats
 containerStyle | object | no | | react style
 description | string | no |  | any string
@@ -117,7 +118,6 @@ onPress | function | no |  | any function
 selected | boolean | no | false | true / false
 size | number | no | 24 | positive numbers
 value | string | no |  | any string
-borderSize | number | 2 | | positive numbers
 
 #### RadioGroup
 Key | Type | Required | Default | Valid Values
