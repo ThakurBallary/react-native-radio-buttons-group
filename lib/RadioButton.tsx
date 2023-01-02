@@ -17,7 +17,7 @@ export default function RadioButton({
   onPress,
   selected = false,
   size = 24,
-  borderSize
+  borderSize = 2,
 }: RadioButtonProps) {
 
   const borderWidth = PixelRatio.roundToNearestPixel(borderSize);
