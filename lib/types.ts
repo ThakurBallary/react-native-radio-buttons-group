@@ -13,6 +13,7 @@ export type RadioButtonProps = {
   selected?: boolean;
   size?: number;
   value?: string;
+  borderSize?: number;
 };
 
 export type RadioGroupProps = {
