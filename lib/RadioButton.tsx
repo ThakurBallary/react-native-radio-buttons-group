@@ -20,7 +20,7 @@ export default function RadioButton({
   borderSize
 }: RadioButtonProps) {
 
-  const borderWidth = borderSize ?? PixelRatio.roundToNearestPixel(size * 0.1);
+  const borderWidth = PixelRatio.roundToNearestPixel(borderSize);
   const sizeHalf = PixelRatio.roundToNearestPixel(size * 0.5);
   const sizeFull = PixelRatio.roundToNearestPixel(size);
 
