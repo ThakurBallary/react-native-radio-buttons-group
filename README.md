@@ -115,7 +115,7 @@ onPress | function | no |  | any function
 selected | boolean | no | false | true / false
 size | number | no | 24 | positive numbers
 value | string | no |  | any string
-borderSize | number | no | | positive numbers
+borderSize | number | 2 | | positive numbers
 
 #### RadioGroup
 Key | Type | Required | Default | Valid Values
