@@ -145,7 +145,7 @@ Fork and create a pull request
 [MIT License](https://github.com/ThakurBallary/react-native-radio-buttons-group/blob/master/LICENSE)
 
 
-## Stargazers over time
+## Stargazers over time 
 
 [![Stargazers over time](https://starchart.cc/ThakurBallary/react-native-radio-buttons-group.svg)](https://starchart.cc/ThakurBallary/react-native-radio-buttons-group)
 
