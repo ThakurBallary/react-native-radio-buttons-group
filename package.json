@@ -1,6 +1,6 @@
 {
   "name": "react-native-radio-buttons-group",
-  "version": "2.2.11",
+  "version": "2.2.12",
   "description": "Simple and Best. An easy to use radio buttons for react native apps.",
   "main": "./lib/index.ts",
   "scripts": {
@@ -32,5 +32,8 @@
   "homepage": "https://github.com/thakurballary/react-native-radio-buttons-group#readme",
   "dependencies": {
     "lodash.isequal": "4.5.0"
+  },
+  "devDependencies": {
+    "@types/lodash-isequal": "4.5.6"
   }
 }
