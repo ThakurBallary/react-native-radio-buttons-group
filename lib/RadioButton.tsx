@@ -8,6 +8,8 @@ export default function RadioButton({
   color = '#444',
   focusColor,
   containerStyle,
+  description,
+  descriptionStyle,
   disabled = false,
   id,
   label,
@@ -17,13 +19,15 @@ export default function RadioButton({
   onFocus,
   onBlur,
   selected = false,
-  size = 24 }: RadioButtonProps) {
+  size = 24,
+  borderSize = 2,
+}: RadioButtonProps) {
 
-  const borderWidth = PixelRatio.roundToNearestPixel(size * 0.1);
+  const borderWidth = PixelRatio.roundToNearestPixel(borderSize);
   const sizeHalf = PixelRatio.roundToNearestPixel(size * 0.5);
   const sizeFull = PixelRatio.roundToNearestPixel(size);
 
-  let orientation: any = { flexDirection: 'row' }
+  let orientation: any = { flexDirection: 'row' };
   let margin: any = { marginLeft: 10 };
 
   const [displayColor, setDisplayColor] = useState(color);
@@ -66,49 +70,54 @@ export default function RadioButton({
   }
 
   return (
-    <TouchableOpacity
-      onPress={handlePress}
-      onFocus={handleFocus}
-      onBlur={handleBlur}
-      style={[styles.container, orientation, { opacity: disabled ? 0.2 : 1 }, containerStyle]}
-    >
-      <View
+    <>
+      <Pressable
+        onPress={handlePress}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
         style={[
-          styles.border,
-          {
-            borderColor: borderColor || displayColor,
-            borderWidth,
-            width: sizeFull,
-            height: sizeFull,
-            borderRadius: sizeHalf
-          }
+          styles.container,
+          orientation,
+          { opacity: disabled ? 0.2 : 1 },
+          containerStyle,
         ]}>
-        {selected && (
-          <View
-            style={{
-              backgroundColor: displayColor,
-              width: sizeHalf,
-              height: sizeHalf,
-              borderRadius: sizeHalf
-            }}
-          />
-        )}
-      </View>
-      {
-        Boolean(label) && <Text style={[margin, labelStyle]}>{label}</Text>
-      }
-    </TouchableOpacity>
-  )
+        <View
+          style={[
+            styles.border,
+            {
+              borderColor: borderColor || color,
+              borderWidth,
+              width: sizeFull,
+              height: sizeFull,
+              borderRadius: sizeHalf,
+            },
+          ]}>
+          {selected && (
+            <View
+              style={{
+                backgroundColor: color,
+                width: sizeHalf,
+                height: sizeHalf,
+                borderRadius: sizeHalf,
+              }}
+            />
+          )}
+        </View>
+        {Boolean(label) && <Text style={[margin, labelStyle]}>{label}</Text>}
+      </Pressable>
+      {Boolean(description) && <Text style={[margin, descriptionStyle]}>{description}</Text>}
+    </>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     marginHorizontal: 10,
-    marginVertical: 5
+    marginVertical: 5,
   },
   border: {
     justifyContent: 'center',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 });

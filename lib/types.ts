@@ -3,6 +3,8 @@ export type RadioButtonProps = {
   color?: string;
   focusColor?: string;
   containerStyle?: object;
+  description?: string;
+  descriptionStyle?: object;
   disabled?: boolean;
   id: string;
   label?: string;
@@ -14,6 +16,7 @@ export type RadioButtonProps = {
   selected?: boolean;
   size?: number;
   value?: string;
+  borderSize?: number;
 };
 
 export type RadioGroupProps = {

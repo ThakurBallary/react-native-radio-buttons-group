@@ -31,19 +31,20 @@ yarn add react-native-radio-buttons-group
 import React, { useState } from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
 
-const radioButtonsData = [{
-    id: '1', // acts as primary key, should be unique and non-empty string
-    label: 'Option 1',
-    value: 'option1'
-}, {
-    id: '2',
-    label: 'Option 2',
-    value: 'option2'
-}]
-
 export default function App() {
 
-    const [radioButtons, setRadioButtons] = useState(radioButtonsData)
+    const [radioButtons, setRadioButtons] = useState([
+        {
+            id: '1', // acts as primary key, should be unique and non-empty string
+            label: 'Option 1',
+            value: 'option1'
+        },
+        {
+            id: '2',
+            label: 'Option 2',
+            value: 'option2'
+        }
+    ]);
 
     function onPressRadioButton(radioButtonsArray) {
         setRadioButtons(radioButtonsArray);
@@ -67,19 +68,20 @@ export default function App() {
 import React, { useState } from 'react';
 import RadioGroup, {RadioButtonProps} from 'react-native-radio-buttons-group';
 
-const radioButtonsData: RadioButtonProps[] = [{
-    id: '1', // acts as primary key, should be unique and non-empty string
-    label: 'Option 1',
-    value: 'option1'
-}, {
-    id: '2',
-    label: 'Option 2',
-    value: 'option2'
-}]
-
 export default function App() {
 
-    const [radioButtons, setRadioButtons] = useState<RadioButtonProps[]>(radioButtonsData)
+    const [radioButtons, setRadioButtons] = useState<RadioButtonProps[]>([
+        {
+            id: '1', // acts as primary key, should be unique and non-empty string
+            label: 'Option 1',
+            value: 'option1'
+        },
+        {
+            id: '2',
+            label: 'Option 2',
+            value: 'option2'
+        }
+    ]);
 
     function onPressRadioButton(radioButtonsArray: RadioButtonProps[]) {
         setRadioButtons(radioButtonsArray);
@@ -102,9 +104,12 @@ export default function App() {
 Key | Type | Required | Default | Valid Values
 --- | --- | --- | --- | --- 
 borderColor | string | no | color | css color formats
+borderSize | number | 2 | | positive numbers
 color | string | no | #444 | css color formats
 focusColor | string | no | | css color formats
 containerStyle | object | no | | react style
+description | string | no |  | any string
+descriptionStyle | object | no |  | react style
 disabled | boolean | no | false | true / false
 id | string | yes |  | unique string
 label | string | no |  | any string
@@ -141,3 +146,11 @@ Fork and create a pull request
 ## License
 
 [MIT License](https://github.com/ThakurBallary/react-native-radio-buttons-group/blob/master/LICENSE)
+
+
+## Stargazers over time 
+
+[![Stargazers over time](https://starchart.cc/ThakurBallary/react-native-radio-buttons-group.svg)](https://starchart.cc/ThakurBallary/react-native-radio-buttons-group)
+
+## Sponsor
+<a href="https://www.buymeacoffee.com/thakurballary" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
