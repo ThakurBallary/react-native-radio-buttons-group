@@ -19,6 +19,7 @@ export type RadioButtonProps = {
 export type RadioGroupProps = {
   containerStyle?: object;
   layout?: 'row' | 'column';
-  onPress?: (radioButtons: RadioButtonProps[]) => void;
+  onPress?: (selectedId: string) => void;
   radioButtons: RadioButtonProps[];
+  selectedId: string;
 };
