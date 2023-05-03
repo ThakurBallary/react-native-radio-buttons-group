@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import RadioButton from './RadioButton';
-import { RadioButtonProps, RadioGroupProps } from './types';
+import { RadioGroupProps } from './types';
 
 export default function RadioGroup({ containerStyle, layout = 'column', onPress, radioButtons, selectedId }: RadioGroupProps) {
 
   function handlePress(id: string) {
-    if(id === selectedId) return;
-    if(onPress)
+    if(id !== selectedId && onPress) {
       onPress(id);
+    }
   }
 
   return (
@@ -24,6 +24,7 @@ export default function RadioGroup({ containerStyle, layout = 'column', onPress,
       ))}
     </View>
   )
+
 }
 
 const styles = StyleSheet.create({

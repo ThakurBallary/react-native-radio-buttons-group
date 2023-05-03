@@ -1,7 +1,6 @@
 # React Native Radio Buttons Group
 
 Simple, best and easy to use radio buttons for react native apps.
-This version removes lodash and add the ability to change the active radio button in a parent component.
 
 ![npm](https://img.shields.io/npm/v/react-native-radio-buttons-group) ![LICENSE MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
@@ -34,7 +33,7 @@ import RadioGroup from 'react-native-radio-buttons-group';
 
 export default function App() {
 
-    const radioButtons = useMemo([
+    const radioButtons = useMemo(() => ([
         {
             id: '1', // acts as primary key, should be unique and non-empty string
             label: 'Option 1',
@@ -45,9 +44,9 @@ export default function App() {
             label: 'Option 2',
             value: 'option2'
         }
-    ], []);
-    
-    const [selectedId, setSelectedId] = useState(radioButtons[0].id);
+    ]), []);
+
+    const [selectedId, setSelectedId] = useState();
 
     return (
         <RadioGroup 
@@ -65,12 +64,12 @@ export default function App() {
 
 ###### App.tsx
 ```tsx
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import RadioGroup, {RadioButtonProps} from 'react-native-radio-buttons-group';
 
 export default function App() {
 
-    const radioButtons = useMemo<RadioButtonProps[]>([
+    const radioButtons: RadioButtonProps[] = useMemo(() => ([
         {
             id: '1', // acts as primary key, should be unique and non-empty string
             label: 'Option 1',
@@ -81,8 +80,9 @@ export default function App() {
             label: 'Option 2',
             value: 'option2'
         }
-    ], []);
-    const [selectedId, setSelectedId] = useState(radioButtons[0].id);
+    ]), []);
+
+    const [selectedId, setSelectedId] = useState<string | undefined>();
 
     return (
         <RadioGroup 
@@ -122,9 +122,9 @@ Key | Type | Required | Default | Valid Values
 --- | --- | --- | --- | ---
 containerStyle | object | no | | react style
 layout | enum | no | column | row / column
-selectedId | string | yes | --- | ---
 onPress | function | no | | any function
 radioButtons | array | yes | | arrary of [RadioButton](#radiobutton) objects
+selectedId | string | no | | unique string
 
 ###### Horizontal (side by side)
 ```jsx

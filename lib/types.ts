@@ -6,6 +6,7 @@ export type RadioButtonProps = {
   descriptionStyle?: object;
   disabled?: boolean;
   id: string;
+  key?: string;
   label?: string;
   labelStyle?: object;
   layout?: 'row' | 'column';
@@ -21,5 +22,5 @@ export type RadioGroupProps = {
   layout?: 'row' | 'column';
   onPress?: (selectedId: string) => void;
   radioButtons: RadioButtonProps[];
-  selectedId: string;
+  selectedId?: string;
 };
