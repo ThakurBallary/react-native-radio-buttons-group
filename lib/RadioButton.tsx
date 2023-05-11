@@ -18,6 +18,7 @@ export default function RadioButton({
   selected = false,
   size = 24,
   borderSize = 2,
+  testID,
 }: RadioButtonProps) {
 
   const borderWidth = PixelRatio.roundToNearestPixel(borderSize);
@@ -50,7 +51,9 @@ export default function RadioButton({
           orientation,
           { opacity: disabled ? 0.2 : 1 },
           containerStyle,
-        ]}>
+        ]}
+        testID={testID}
+      >
         <View
           style={[
             styles.border,
