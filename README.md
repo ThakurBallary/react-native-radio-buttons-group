@@ -115,8 +115,8 @@ layout | enum | no | row | row / column
 onPress | function | no |  | any function 
 selected | boolean | no | false | true / false
 size | number | no | 24 | positive numbers
-value | string | no |  | any string
 testID | string | no | | any string
+value | string | no |  | any string
 
 #### RadioGroup
 Key | Type | Required | Default | Valid Values

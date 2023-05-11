@@ -5,6 +5,7 @@ import { RadioButtonProps } from './types';
 
 export default function RadioButton({
   borderColor,
+  borderSize = 2,
   color = '#444',
   containerStyle,
   description,
@@ -17,10 +18,8 @@ export default function RadioButton({
   onPress,
   selected = false,
   size = 24,
-  borderSize = 2,
   testID,
 }: RadioButtonProps) {
-
   const borderWidth = PixelRatio.roundToNearestPixel(borderSize);
   const sizeHalf = PixelRatio.roundToNearestPixel(size * 0.5);
   const sizeFull = PixelRatio.roundToNearestPixel(size);
