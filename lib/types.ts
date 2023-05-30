@@ -1,15 +1,17 @@
+import { StyleProp, TextStyle, ViewStyle } from 'react-native';
+
 export type RadioButtonProps = {
   borderColor?: string;
   borderSize?: number;
   color?: string;
-  containerStyle?: object;
+  containerStyle?: StyleProp<ViewStyle>;
   description?: string;
-  descriptionStyle?: object;
+  descriptionStyle?: StyleProp<TextStyle>;
   disabled?: boolean;
   id: string;
   key?: string;
   label?: string;
-  labelStyle?: object;
+  labelStyle?: StyleProp<TextStyle>;
   layout?: 'row' | 'column';
   onPress?: (id: string) => void;
   selected?: boolean;
@@ -19,7 +21,7 @@ export type RadioButtonProps = {
 };
 
 export type RadioGroupProps = {
-  containerStyle?: object;
+  containerStyle?: StyleProp<ViewStyle>;
   layout?: 'row' | 'column';
   onPress?: (selectedId: string) => void;
   radioButtons: RadioButtonProps[];
