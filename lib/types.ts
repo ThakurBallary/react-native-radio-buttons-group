@@ -1,6 +1,7 @@
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
 export type RadioButtonProps = {
+  accessibilityLabel?: string;
   borderColor?: string;
   borderSize?: number;
   color?: string;
