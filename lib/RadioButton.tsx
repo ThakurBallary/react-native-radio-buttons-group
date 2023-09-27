@@ -52,8 +52,12 @@ export default function RadioButton({
           { opacity: disabled ? 0.2 : 1 },
           containerStyle,
         ]}
+        disabled={disabled}
         testID={testID}
-        accessibilityLabel={accessibilityLabel}
+        accessibilityRole="radio"
+        accessibilityLabel={label || accessibilityLabel}
+        accessibilityHint={description}
+        accessibilityState={{ checked: selected, disabled }}
       >
         <View
           style={[
