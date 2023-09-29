@@ -77,9 +77,9 @@ export default function RadioButton({
             />
           )}
         </View>
-        {Boolean(label) && <Text style={[margin, labelStyle]}>{label}</Text>}
+        {Boolean(label) && <Text style={[margin, labelStyle, {color}]}>{label}</Text>}
       </Pressable>
-      {Boolean(description) && <Text style={[margin, descriptionStyle]}>{description}</Text>}
+      {Boolean(description) && <Text style={[margin, descriptionStyle, {color}]}>{description}</Text>}
     </>
   );
 }
