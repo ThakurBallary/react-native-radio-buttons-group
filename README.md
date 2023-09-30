@@ -101,6 +101,7 @@ export default function App() {
 #### RadioButton
 Key | Type | Required | Default | Valid Values
 --- | --- | --- | --- | --- 
+accessibilityLabel | string | no | radio button | any string
 borderColor | string | no | color | css color formats
 borderSize | number | 2 | | positive numbers
 color | string | no | #444 | css color formats
@@ -121,6 +122,7 @@ value | string | no |  | any string
 #### RadioGroup
 Key | Type | Required | Default | Valid Values
 --- | --- | --- | --- | ---
+accessibilityLabel | string | no | radio group | any string
 containerStyle | object | no | | react style
 layout | enum | no | column | row / column
 onPress | function | no | | any function

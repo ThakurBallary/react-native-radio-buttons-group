@@ -4,7 +4,7 @@ import { PixelRatio, Pressable, StyleSheet, Text, View } from 'react-native';
 import { RadioButtonProps } from './types';
 
 export default function RadioButton({
-  accessibilityLabel,
+  accessibilityLabel = 'radio button',
   borderColor,
   borderSize = 2,
   color = '#444',
@@ -34,18 +34,19 @@ export default function RadioButton({
   }
 
   function handlePress() {
-    if (disabled) {
-      return null;
-    }
-    if (onPress) {
+    if(onPress) {
       onPress(id);
     }
-    return null;
   }
 
   return (
     <>
       <Pressable
+        accessibilityHint={description}
+        accessibilityLabel={label || accessibilityLabel}
+        accessibilityRole="radio"
+        accessibilityState={{ checked: selected, disabled }}
+        disabled={disabled}
         onPress={handlePress}
         style={[
           styles.container,
@@ -53,12 +54,7 @@ export default function RadioButton({
           { opacity: disabled ? 0.2 : 1 },
           containerStyle,
         ]}
-        disabled={disabled}
         testID={testID}
-        accessibilityRole="radio"
-        accessibilityLabel={label || accessibilityLabel}
-        accessibilityHint={description}
-        accessibilityState={{ checked: selected, disabled }}
       >
         <View
           style={[
