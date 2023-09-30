@@ -101,7 +101,7 @@ export default function App() {
 #### RadioButton
 Key | Type | Required | Default | Valid Values
 --- | --- | --- | --- | --- 
-accessibilityLabel | string | no | radio button | any string
+accessibilityLabel | string | no | Value of `label` | any string
 borderColor | string | no | color | css color formats
 borderSize | number | 2 | | positive numbers
 color | string | no | #444 | css color formats

@@ -5,7 +5,7 @@ import RadioButton from './RadioButton';
 import { RadioGroupProps } from './types';
 
 export default function RadioGroup({
-  accessibilityLabel = 'radio group',
+  accessibilityLabel,
   containerStyle,
   layout = 'column',
   onPress,
