@@ -40,6 +40,7 @@ export default function RadioButton({
     if (onPress) {
       onPress(id);
     }
+    return null;
   }
 
   return (
