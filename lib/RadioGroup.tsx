@@ -15,7 +15,7 @@ export default function RadioGroup({
 }: RadioGroupProps) {
 
   function handlePress(id: string) {
-    if(id !== selectedId && onPress) {
+    if (id !== selectedId && onPress) {
       onPress(id);
     }
   }

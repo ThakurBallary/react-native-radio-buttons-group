@@ -122,7 +122,7 @@ value | string | no |  | any string
 #### RadioGroup
 Key | Type | Required | Default | Valid Values
 --- | --- | --- | --- | ---
-accessibilityLabel | string | no | no | any string
+accessibilityLabel | string | no | | any string
 containerStyle | object | no | | react style
 layout | enum | no | column | row / column
 onPress | function | no | | any function
