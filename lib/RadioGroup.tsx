@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native';
 import RadioButton from './RadioButton';
 import { RadioGroupProps } from './types';
 
-export default function RadioGroup({ containerStyle, layout = 'column', onPress, radioButtons, selectedId, testID}: RadioGroupProps) {
+export default function RadioGroup({ accessibilityLabel, containerStyle, layout = 'column', onPress, radioButtons, selectedId, testID}: RadioGroupProps) {
 
   function handlePress(id: string) {
     if(id !== selectedId && onPress) {
@@ -13,7 +13,12 @@ export default function RadioGroup({ containerStyle, layout = 'column', onPress,
   }
 
   return (
-    <View style={[styles.container, { flexDirection: layout }, containerStyle]} testID={testID}>
+    <View
+      style={[styles.container, { flexDirection: layout }, containerStyle]}
+      testID={testID}
+      accessibilityLabel={accessibilityLabel}
+      accessibilityRole="radiogroup"
+    >
       {radioButtons.map((button) => (
         <RadioButton
           {...button}
