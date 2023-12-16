@@ -24,7 +24,7 @@ yarn add react-native-radio-buttons-group
 
 ### Usage
 
-##### Javascript Example
+##### JavaScript Example
 
 ###### App.js
 ```jsx
@@ -60,7 +60,7 @@ export default function App() {
 
 ```
 
-##### Typescript Example
+##### TypeScript Example
 
 ###### App.tsx
 ```tsx
@@ -126,7 +126,7 @@ accessibilityLabel | string | no | | any string
 containerStyle | object | no | | react style
 layout | enum | no | column | row / column
 onPress | function | no | | any function
-radioButtons | array | yes | | arrary of [RadioButton](#radiobutton) objects
+radioButtons | array | yes | | array of [RadioButton](#radiobutton) objects
 selectedId | string | no | | unique string
 testID | string | no | | any string
 
