@@ -1,19 +1,20 @@
-import React from "react";
-import { StyleSheet, View } from "react-native";
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
 
-import RadioButton from "./RadioButton";
-import { RadioGroupProps } from "./types";
+import RadioButton from './RadioButton';
+import { RadioGroupProps } from './types';
 
 export default function RadioGroup({
   accessibilityLabel,
   containerStyle,
   labelStyle,
-  layout = "column",
+  layout = 'column',
   onPress,
   radioButtons,
   selectedId,
-  testID,
+  testID
 }: RadioGroupProps) {
+
   function handlePress(id: string) {
     if (id !== selectedId && onPress) {
       onPress(id);
@@ -37,11 +38,12 @@ export default function RadioGroup({
         />
       ))}
     </View>
-  );
+  )
+
 }
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "center",
-  },
+    alignItems: 'center',
+  }
 });
