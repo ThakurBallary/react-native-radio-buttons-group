@@ -7,6 +7,7 @@ import { RadioGroupProps } from './types';
 export default function RadioGroup({
   accessibilityLabel,
   containerStyle,
+  labelStyle,
   layout = 'column',
   onPress,
   radioButtons,
@@ -33,6 +34,7 @@ export default function RadioGroup({
           key={button.id}
           selected={button.id === selectedId}
           onPress={() => handlePress(button.id)}
+          labelStyle={labelStyle}
         />
       ))}
     </View>
