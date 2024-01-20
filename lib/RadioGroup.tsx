@@ -32,9 +32,9 @@ export default function RadioGroup({
         <RadioButton
           {...button}
           key={button.id}
+          labelStyle={labelStyle}
           selected={button.id === selectedId}
           onPress={() => handlePress(button.id)}
-          labelStyle={labelStyle}
         />
       ))}
     </View>
