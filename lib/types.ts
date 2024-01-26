@@ -24,6 +24,7 @@ export type RadioButtonProps = {
 export type RadioGroupProps = {
   accessibilityLabel?: string;
   containerStyle?: StyleProp<ViewStyle>;
+  labelStyle?: StyleProp<TextStyle>;
   layout?: 'row' | 'column';
   onPress?: (selectedId: string) => void;
   radioButtons: RadioButtonProps[];
