@@ -16,8 +16,14 @@ export default function RadioGroup({
 }: RadioGroupProps) {
 
   function handlePress(id: string) {
-    if (id !== selectedId && onPress) {
-      onPress(id);
+    if (id !== selectedId) {
+      if (onPress) {
+        onPress(id);
+      }
+      const button = radioButtons.find(rb => rb.id === id);
+      if (button?.onPress) {
+        button.onPress(id);
+      }
     }
   }
 
@@ -34,7 +40,7 @@ export default function RadioGroup({
           key={button.id}
           labelStyle={button.labelStyle || labelStyle}
           selected={button.id === selectedId}
-          onPress={() => handlePress(button.id)}
+          onPress={handlePress}
         />
       ))}
     </View>
