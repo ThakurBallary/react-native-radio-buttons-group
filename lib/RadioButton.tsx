@@ -53,8 +53,8 @@ export default function RadioButton({
   return (
     <>
       <Pressable
-        accessibilityHint={typeof description === "string" ? description : ""}
-        accessibilityLabel={accessibilityLabel || (typeof label === "string" ? label: null)}
+        accessibilityHint={typeof description === "string" ? description : undefined}
+        accessibilityLabel={accessibilityLabel || (typeof label === "string" ? label: undefined)}
         accessibilityRole="radio"
         accessibilityState={{ checked: selected, disabled }}
         disabled={disabled}
