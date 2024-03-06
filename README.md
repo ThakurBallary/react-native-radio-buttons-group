@@ -106,12 +106,12 @@ borderColor | string | no | color | css color formats
 borderSize | number | 2 | | positive numbers
 color | string | no | #444 | css color formats
 containerStyle | object | no | | react style
-description | string | no |  | any string
-descriptionStyle | object | no |  | react style
+description | ReactNode | no |  | any react node, texts are rendered in a `Text`-component
+descriptionStyle | object | no |  | react style, only used if `description` is not a react component
 disabled | boolean | no | false | true / false
 id | string | yes |  | unique string
-label | string | no |  | any string
-labelStyle | object | no |  | react style
+label | ReactNode | no |  | any react node, texts are rendered in a `Text`-component
+labelStyle | object | no |  | react style, only used if `label` is not a react component
 layout | enum | no | row | row / column
 onPress | function | no |  | any function 
 selected | boolean | no | false | true / false
