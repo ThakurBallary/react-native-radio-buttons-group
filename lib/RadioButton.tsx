@@ -39,11 +39,22 @@ export default function RadioButton({
     }
   }
 
+  const labelComp = React.isValidElement(label) ? (
+    label
+  ) : Boolean(label) ? (
+    <Text style={[margin, labelStyle]}>{label}</Text>
+  ) : null;
+  const descComp = React.isValidElement(description) ? (
+    description
+  ) : Boolean(description) ? (
+    <Text style={[margin, descriptionStyle]}>{description}</Text>
+  ) : null;
+
   return (
     <>
       <Pressable
-        accessibilityHint={description}
-        accessibilityLabel={accessibilityLabel || label}
+        accessibilityHint={typeof description === "string" ? description : undefined}
+        accessibilityLabel={accessibilityLabel || (typeof label === "string" ? label: undefined)}
         accessibilityRole="radio"
         accessibilityState={{ checked: selected, disabled }}
         disabled={disabled}
@@ -79,11 +90,9 @@ export default function RadioButton({
             />
           )}
         </View>
-        {Boolean(label) && <Text style={[margin, labelStyle]}>{label}</Text>}
+        {labelComp}
       </Pressable>
-      {Boolean(description) && (
-        <Text style={[margin, descriptionStyle]}>{description}</Text>
-      )}
+      {descComp}
     </>
   );
 }
