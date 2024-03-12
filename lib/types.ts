@@ -1,4 +1,4 @@
-import {ReactNode} from "react";
+import {ReactNode} from 'react';
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
 export type RadioButtonProps = {
@@ -7,12 +7,12 @@ export type RadioButtonProps = {
   borderSize?: number;
   color?: string;
   containerStyle?: StyleProp<ViewStyle>;
-  description?: ReactNode;
+  description?: ReactNode | string;
   descriptionStyle?: StyleProp<TextStyle>;
   disabled?: boolean;
   id: string;
   key?: string;
-  label?: ReactNode;
+  label?: ReactNode | string;
   labelStyle?: StyleProp<TextStyle>;
   layout?: 'row' | 'column';
   onPress?: (id: string) => void;
