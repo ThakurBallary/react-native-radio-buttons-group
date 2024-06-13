@@ -11,6 +11,7 @@ export type RadioButtonProps = {
   descriptionStyle?: StyleProp<TextStyle>;
   disabled?: boolean;
   id: string;
+  innerCircleSize?: number;
   key?: string;
   label?: ReactNode | string;
   labelStyle?: StyleProp<TextStyle>;

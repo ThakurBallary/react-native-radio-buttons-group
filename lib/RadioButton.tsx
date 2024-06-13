@@ -83,8 +83,8 @@ export default function RadioButton({
             <View
               style={{
                 backgroundColor: color,
-                width: sizeHalf,
-                height: sizeHalf,
+                width: innerCircleSize || sizeHalf,
+                height: innerCircleSize || sizeHalf,
                 borderRadius: sizeHalf,
               }}
             />
